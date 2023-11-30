@@ -1,29 +1,19 @@
-import requests as req
-import re
-import json
+import pandas as pd
+import psycopg
 
-response = req.get('https://ocistatus.oraclecloud.com/api/v2/components.json')
-dict = json.loads(response.text)
+with psycopg.connect("postgres://hackathon_2z5k_user:uF2wUEjFpjdKcNwvH3k2Vhx0U6dTPRKv@dpg-cljqanh8mmjc73dbc9t0-a.oregon-postgres.render.com/hackathon_2z5k") as conn:
+    with conn.cursor() as cur:
 
-for i in dict['regionHealthReports']:
-    listaFuncionando = []
-    listaNãoFuncionando = []
-    if 'Sao Paulo' in i['regionName'] or 'Vinhedo' in i['regionName']:
-        for ii in i['serviceHealthReports']:
-            if ii['serviceStatus'] != 'NormalPerformance':
-                listaNãoFuncionando.append(ii['serviceName'])
-            else:
-                listaFuncionando.append(ii['serviceName'])
-        print(len(listaFuncionando))
-        print(len(listaNãoFuncionando))
+        cur.execute(
+            "INSERT INTO test (num, data) VALUES (%s, %s)",
+            (100, "abc'def"))
 
+        cur.execute("SELECT * FROM test")
+        cur.execute("SELECT * FROM TB_USUARIOS")
+        cur.fetchone()
+        
+        
+        for record in cur:
+            print(record)
 
-
-response = req.get('https://jira-software.status.atlassian.com/')
-html = response.text
-
-t = re.compile(r'.*    Operational.*')
-check = len(t.findall(html))
-errado = 12 - check
-print(check)
-print(errado)
+        conn.commit()
