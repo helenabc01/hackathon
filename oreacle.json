@@ -1,0 +1,47 @@
+{
+    "realm": "OC1",
+    "regionHealthReports": [{
+      "regionId": "720cecff-a77f-4fe0-9c3e-6b30fa47aff4",
+      "regionName": "Australia East (Sydney)",
+      "regionCanonicalName": "ap-sydney-1",
+      "geographicAreaName": "APAC",
+      "serviceHealthReports": [{
+          "serviceId": "bcb5cf2a-f823-4252-b0c7-6ceb6e5530d9",
+          "serviceName": "Account Management and Billing",
+          "serviceCanonicalName": "account-management-and-billing",
+          "serviceCategoryId": "9c4f48de-a9d6-4d07-a79c-c7a9f567f4c3",
+          "serviceCategoryName": "Cloud Services",
+          "serviceStatus": "NormalPerformance",
+          "incidents": []
+        },
+        {
+          "serviceId": "0c378162-9ac2-4a34-b3cc-e31710297017",
+          "serviceName": "Console",
+          "serviceCanonicalName": "console",
+          "serviceCategoryId": "9c4f48de-a9d6-4d07-a79c-c7a9f567f4c3",
+          "serviceCategoryName": "Cloud Services",
+          "serviceStatus": "NormalPerformance",
+          "incidents": []
+        },
+        {
+          "serviceId": "af3ce7f8-f599-4e60-97e2-a0491a2bd44e",
+          "serviceName": "Developer Tools",
+          "serviceCanonicalName": "developer-tools",
+          "serviceCategoryId": "9c4f48de-a9d6-4d07-a79c-c7a9f567f4c3",
+          "serviceCategoryName": "Cloud Services",
+          "serviceStatus": "NormalPerformance",
+          "incidents": []
+        },
+        {
+          "serviceId": "5e39842e-4de4-431e-80d3-5a3b8fb80c11",
+          "serviceName": "Java Management Service",
+          "serviceCanonicalName": "java-management-service",
+          "serviceCategoryId": "9c4f48de-a9d6-4d07-a79c-c7a9f567f4c3",
+          "serviceCategoryName": "Cloud Services",
+          "serviceStatus": "NormalPerformance",
+          "incidents": []
+        }
+      ]
+    }]
+  }
+  
